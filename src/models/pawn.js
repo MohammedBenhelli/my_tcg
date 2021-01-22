@@ -22,6 +22,7 @@ export default class Pawn {
     }
 
     receiveAttack(opponent, strikeBack=false) {
-
+        if (strikeBack) this.life -= opponent.getDef();
+        else this.life -= opponent.getStrength();
     }
 }
